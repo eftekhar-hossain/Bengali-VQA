@@ -1,0 +1,16 @@
+torch==2.4.1
+tensorflow==2.11.0
+transformers==4.44.2
+torchvision==0.19.1
+scikit-learn==1.5.2
+multilingual-clip==1.0.10
+nltk==3.9.1
+openpyxl==3.1.5
+Madgrad
+pandas
+numpy
+matplotlib
+seaborn
+re
+json
+gdown
