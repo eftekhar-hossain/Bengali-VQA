@@ -1,0 +1,5 @@
+# Ignore specific folders
+Dataset/
+models/
+Scripts/Extra
+Scripts/Slurm_Scripts
