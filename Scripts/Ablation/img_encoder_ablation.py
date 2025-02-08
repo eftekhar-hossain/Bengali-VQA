@@ -508,6 +508,7 @@ if __name__ == "__main__":
                         help='Learning rate - default 1e-5')
     
     parser.add_argument('--model_name',dest="model_name", type=str, default = 'resnet',
+                        choices=['convex', 'efficient', 'resnet'],
                         help='Image Model Name - default resnet')
                      
     args = parser.parse_args()
