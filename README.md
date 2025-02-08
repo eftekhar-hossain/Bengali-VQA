@@ -114,6 +114,6 @@ After evaluating, it will provide the accuracy in each question categories: **Ye
 </p>
 <p>
 <em>Illustration of some case study from the
-test set of BVQA where the proposed <strong>MCRAN</strong> performs well. First, we present the actual answer to a question followed by predicted answers of the state-of-the-art methods and our proposed method. The <font color="red">red cross</font> mark denotes a <u>false prediction</u>, while the <font color = "green"><strong>green tick </strong></font>mark is the <u>correct prediction</u>.</em></p>
+test set of BVQA where the proposed <strong>MCRAN</strong> performs well. First, we present the actual answer to a question followed by predicted answers of the state-of-the-art methods and our proposed method. The <font color="red"><strong>red cross</strong></font> mark denotes a <u>false prediction</u>, while the <font color = "green"><strong>green tick </strong></font>mark is the <u>correct prediction</u>.</em></p>
 
 # Citation
