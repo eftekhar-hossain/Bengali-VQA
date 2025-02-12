@@ -20,7 +20,7 @@ This repository is the official implementation of the paper [BVQA: Connecting La
 
 
 ## Instructions
-- To reproduce the results, you need to  install `Python=3.10.x`. All the models are implemented using `Pytorch=2.4.0`. The `MCRAN` require GPU with 16GB RAM. 
+- To reproduce the results, you need to  install `Python=3.10.x`. All the models are implemented using `Pytorch=2.4.0`. The `MCRAN` requires a GPU with 16GB RAM. 
 
 - If you use any IDE, first clone (`git clone <url>`) the repository. Then, create a virtual environment and activate it.
     ```
@@ -33,11 +33,11 @@ This repository is the official implementation of the paper [BVQA: Connecting La
     ```
 
 ### Dataset
-The dataset can be downloaded from this link: [BVQA-Dataset](). The folder contains all the images and excel files for the train, validation, and test set. The excel file has the following columns:
+The dataset can be downloaded from this link: [BVQA-Dataset](https://drive.google.com/file/d/1W88qcCy80_XnKgC-4t36WPPria1Aq5lW/view?usp=sharing). The folder contains all the images and Excel files for the training, validation, and test set. The Excel file has the following columns:
 
 - `filename`: image names
 - `questions`: question for the image
-- `answers` : answer for the corresponding question
+- `answers`: answer for the corresponding question
 - `enc_answers`: encoded version of answers
 - `category`: category of the questions (i.e., **yes/no**, **counting**, and **other** )
 
@@ -49,7 +49,7 @@ Ensure you follow the given folder organization.
 
 ### Folder Organization
 
-Folders need to organized as follows in `Bengali-VQA` directory.
+Folders need to be organized as follows in the `Bengali-VQA` directory.
 
 ```
 ├── Dataset
@@ -66,7 +66,7 @@ Folders need to organized as follows in `Bengali-VQA` directory.
 
 ### Traning and Evaluation of MCRAN
 
-To run **MCRAN** on `BVQA` dataset run the following command. If you are not in the `Scripts` folder.
+Run the following command to train **MCRAN** on the `BVQA` dataset. If you are not in the `Scripts` folder.
 
 ```
 cd Scripts
@@ -86,26 +86,26 @@ python mcran.py \
 - `--learning_rate`: Sets the learning rate (`default: 1e-5`).
 - `--model_name`: Specifies the saved model name (`default: mcran.pth`).
 
-After evaluating, it will provide the accuracy in each question categories: **Yes/No**, **Number**, **Other**, and **All**.
+After evaluation, it will provide the accuracy in each question category: **Yes/No**, **Number**, **Other**, and **All**.
 
 
 ### Ablation
 
 `Ablation` folder contains the following scripts:
 
-- `layer_head_ablation.py` ablation of number of transformer layers and attention heads.
-- `img_encoder_ablation.py` ablation of different image encoders in the **MCRAN**. Tested with three encoders `ResNet`, `ConvNext`, `EfficientNet`.
+- `layer_head_ablation.py` ablation of the number of transformer layers and attention heads.
+- `img_encoder_ablation.py` ablation of different image encoders in the **MCRAN**. Tested with three encoders `ResNet`, `ConvNext`, and `EfficientNet`
 - `txt_encoder_ablation.py` ablation of text encoder in the **MCRAN**. Only tested with `Multilingual-DistillBERT` model.
 
 ### Baselines
 
 `Baselines` folder contains the following scripts:
 
-- `initial_baselines.ipynb` contains the impelementation of baselines like **Vanilla VQA**, **MFB**, **MFH**, and **TDA**. All of them were implemented using TensorFlow framework.
-- `hauvqa.py` implementation of the VQA model developed for Hausa language. [[Paper'23]](https://aclanthology.org/2023.findings-acl.646/)
-- `medvqa.py` implemenation of an attention based model developed for medical VQA. [[Paper'23]](https://link.springer.com/article/10.1007/s11042-023-17162-3) 
-- `vgclf.py` another attention based model developed for medical VQA. [[Paper'25]](https://www.sciencedirect.com/science/article/pii/S0925231224015017?casa_token=hpCJTR59XeMAAAAA:DiqnzktdaEWSMqI48dPdjL20yjPMZ8jxFyoNfpu83dZDikxzCBi0bPZ18sRuOiCu3_Rp-oKQTw) 
-- `mclip.py` implemenation of a fine-tuned multilingual CLIP model. [[Paper'23]](https://aclanthology.org/2023.acl-long.728/)
+- `initial_baselines.ipynb` contains the impelementation of baselines like **Vanilla VQA**, **MFB**, **MFH**, and **TDA**. All of them were implemented using the TensorFlow framework.
+- `hauvqa.py` implementation of the VQA model developed for the Hausa language. [[Paper'23]](https://aclanthology.org/2023.findings-acl.646/)
+- `medvqa.py` implementation of an attention-based model developed for medical VQA. [[Paper'23]](https://link.springer.com/article/10.1007/s11042-023-17162-3) 
+- `vgclf.py` is another attention-based model developed for medical VQA. [[Paper'25]](https://www.sciencedirect.com/science/article/pii/S0925231224015017?casa_token=hpCJTR59XeMAAAAA:DiqnzktdaEWSMqI48dPdjL20yjPMZ8jxFyoNfpu83dZDikxzCBi0bPZ18sRuOiCu3_Rp-oKQTw) 
+- `mclip.py` implementation of a fine-tuned multilingual CLIP model. [[Paper'23]](https://aclanthology.org/2023.acl-long.728/)
 
 
 ### Case Study
@@ -113,7 +113,6 @@ After evaluating, it will provide the accuracy in each question categories: **Ye
     <a><img src="Img/FIGURE 7.png" width="70%"></a> <br>
 </p>
 <p>
-<em>Illustration of some case study from the
-test set of BVQA where the proposed <strong>MCRAN</strong> performs well. First, we present the actual answer to a question followed by predicted answers of the state-of-the-art methods and our proposed method. The <font color="red"><strong>red cross</strong></font> mark denotes a <u>false prediction</u>, while the <font color = "green"><strong>green tick </strong></font>mark is the <u>correct prediction</u>.</em></p>
+<em>Illustration of some case studies from the test set of BVQA where the proposed <strong>MCRAN</strong> performs well. First, we present the actual answer to a question followed by predicted answers of the state-of-the-art methods and our proposed method. The <font color="red"><strong>red cross</strong></font> mark denotes a <u>false prediction</u>, while the <font color = "green"><strong>green tick </strong></font>mark is the <u>correct prediction</u>.</em></p>
 
 # Citation
