@@ -1,6 +1,6 @@
 # Open Ended Bengali Visual Question Answering
 
-This repository is the official implementation of paper [BVQA: Connecting Language and Vision Through Multimodal Attention for Open-Ended Question Answering]()
+This repository is the official implementation of the paper [BVQA: Connecting Language and Vision Through Multimodal Attention for Open-Ended Question Answering](https://ieeexplore.ieee.org/document/10878995)
 
 ## Pipeline of BVQA
 <p align="center">
