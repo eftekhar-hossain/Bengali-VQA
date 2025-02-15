@@ -116,3 +116,15 @@ After evaluation, it will provide the accuracy in each question category: **Yes/
 <em>Illustration of some case studies from the test set of BVQA where the proposed <strong>MCRAN</strong> performs well. First, we present the actual answer to a question followed by predicted answers of the state-of-the-art methods and our proposed method. The <font color="red"><strong>red cross</strong></font> mark denotes a <u>false prediction</u>, while the <font color = "green"><strong>green tick </strong></font>mark is the <u>correct prediction</u>.</em></p>
 
 # Citation
+
+If you find our works useful for your research and applications, please cite using this BibTeX:
+```bibtex
+
+@article{bhuyan2025bvqa,
+  title={BVQA: Connecting Language and Vision Through Multimodal Attention for Open-Ended Question Answering},
+  author={Bhuyan, Md Shalha Mucha and Hossain, Eftekhar and Sathi, Khaleda Akhter and Hossain, Md Azad and Dewan, M Ali Akber},
+  journal={IEEE Access},
+  year={2025},
+  publisher={IEEE}
+}
+```
